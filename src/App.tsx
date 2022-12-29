@@ -1,12 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import ReactQuery from "./ReactQuery";
 import Routes from "./pages/Routes";
 
 function App() {
   return (
     <div>
-      <Routes />
+      <ReactQuery>
+        <Routes />
+      </ReactQuery>
     </div>
   );
 }
