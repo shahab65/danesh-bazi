@@ -1,11 +1,20 @@
 import React from "react";
-import { useVideoList } from "calls";
-
+import { useExam } from "calls";
+import Question from "components/Question";
 const Exam = () => {
-  const { data, isLoading, isError, error, isSuccess, refetch } =
-    useVideoList();
+  const { data, isLoading, isError, error, isSuccess, refetch } = useExam();
   console.log(data);
-  return <div>today test</div>;
+  return (
+    <div>
+      {data?.map((question) => {
+        return (
+          <div key={question.id}>
+            <Question question={question} />{" "}
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Exam;

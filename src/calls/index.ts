@@ -1,1 +1,1 @@
-export { useVideoList } from "./exam";
+export { useExam } from "./exam";
